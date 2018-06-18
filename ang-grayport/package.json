@@ -27,7 +27,8 @@
     "mapbox-gl": "^0.45.0",
     "ngx-page-scroll": "^5.0.0",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "node-sass": "^4.9.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",

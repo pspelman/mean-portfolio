@@ -1,0 +1,22 @@
+//centering mixin
+@mixin center_element {
+  //background-color: $background__holder-color;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@mixin mobile_background {
+  background: url('../assets/img/elvis_piano-color-bwdark95.gif') no-repeat bottom center scroll;
+  //background: url('../assets/img/elvis_piano_92.png') no-repeat bottom center scroll;
+  background-size: cover;
+}
+
+
+@mixin link_hover_effect{
+  background-color: rgba(0, 191, 255, 0.56);
+  padding: .5rem;
+  transition-duration: .3s;
+  width: 100%;
+
+}

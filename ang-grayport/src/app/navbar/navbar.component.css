@@ -1,0 +1,12 @@
+.navbar-collapse {
+  margin-right: auto;
+  padding-left: 2rem;
+  text-align: left;
+  text-justify: distribute; }
+  .navbar-collapse a:hover {
+    background-color: rgba(0, 191, 255, 0.56);
+    padding: .5rem;
+    transition-duration: .3s;
+    width: 100%; }
+
+/*# sourceMappingURL=navbar.component.css.map */

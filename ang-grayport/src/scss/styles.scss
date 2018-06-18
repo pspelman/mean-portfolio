@@ -1,0 +1,573 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+@import 'mixins.scss';
+body {
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  background-color: black;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+
+  margin: 0 0 35px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+
+  margin: 0 0 25px;
+  @media(min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin: 0 0 35px;
+  }
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+#mainNav {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  margin-bottom: 0;
+
+  text-transform: uppercase;
+
+  border-bottom: 1px solid fade-out(white, .7);
+  background-color: black;
+  .navbar-toggler {
+    font-size: 14px;
+
+    padding: 11px;
+
+    color: white;
+    border: 1px solid white;
+  }
+  .navbar-brand {
+    font-weight: 700;
+  }
+  a {
+    color: white;
+  }
+
+
+
+  @media(min-width:992px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    letter-spacing: 1px;
+
+    border-bottom: none;
+    background: transparent;
+    &.navbar-shrink {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      border-bottom: 1px solid fade-out(white, .7);
+      background: black;
+    }
+    .nav-link.active {
+      outline: none;
+      background-color: rgba(white, .3);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      padding-left: 1rem;
+
+      &:hover {
+        //background-color: $navbar__colors_link_hover;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out;
+
+        //color: fade(white, 80%);
+        color: lightseagreen;
+        outline: none;
+      }
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+$intro-text-size: 2.3rem;
+
+
+//.filter-me {
+//  @media(min-width:768px) {
+//    height: 100%;
+//    padding: 0;
+//    .intro-body {
+//      .brand-heading {
+//        font-size: 4rem;
+//      }
+//      .intro-text {
+//        font-size: $intro-text-size;
+//      }
+//    }
+//  }
+//
+//}
+//
+
+
+.masthead {
+  display: table;
+  //position: absolute;
+  filter: none;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: rgba(38, 103, 179, 0.73) .2rem .1rem;
+
+
+  //background: rgba(52, 41, 48, 0.93) url('../assets/img/emery_mask_black01.png')no-repeat bottom center scroll;
+  //background: rgba(96, 89, 103, 0.87) url('../assets/img/emery_mask_black01.png')no-repeat bottom center scroll;
+
+
+  //background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .intro-body {
+    display: table-cell;
+
+    vertical-align: middle;
+    .brand-heading {
+      font-size: 50px;
+    }
+    .intro-text {
+      font-size: $intro-text-size;
+    }
+  }
+  @media(min-width:768px) {
+    height: 100%;
+    padding: 0;
+    .intro-body {
+      .brand-heading {
+        font-size: 4rem;
+      }
+      .intro-text {
+        font-size: $intro-text-size;
+      }
+    }
+  }
+  //
+  //@media(max-width:900px) {
+  //  background: url('../assets/img/elvis_piano_92.png') no-repeat bottom center scroll;
+  //}
+}
+.masthead::after {
+
+
+  /* Extra small devices (phones, 600px and down) */
+  //@media only screen and (max-width: 600px) {
+  //  //@include mobile_background;
+  //  background: black url('../assets/img/elvis_piano-color-95.gif') top center scroll no-repeat;
+  //
+  //}
+
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  //@media only screen and (max-width: 700px) {
+  //  @include mobile_background;
+  //}
+
+  //
+  //@media only screen and (max-width: 780px) {
+  //
+  //}
+
+
+  @media only screen and (min-width: 800px) {
+    content: " ";
+    position: absolute;
+    //display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(-2px) scale(1);
+
+    //background-size: 100%;
+    //background: url('../assets/img/elvis_piano_92.png') top center scroll no-repeat;
+    background: black url('../assets/img/elvis_piano-color-95.gif') top center scroll no-repeat;
+    background-size: cover;
+    //background: url('../assets/img/elvis_piano_92.png') no-repeat bottom center scroll;
+    filter: grayscale(50%) brightness(.4);
+
+    //filter: chroma(#0000ff);
+    z-index: -1;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 800px) {
+    //@include mobile_background;
+    background: black url('../assets/img/elvis_piano-color-95.gif') center scroll no-repeat;
+    content: " ";
+    position: absolute;
+    //display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    filter: grayscale(50%) brightness(.4);
+
+  }
+
+}
+
+
+
+
+.item {
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+  max-width: 320px;
+  height: 400px;
+  overflow: hidden;
+}
+.item .img-wrap:before {
+  content: '';
+  background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.item .img-wrap:after {
+  content: '';
+  display: block;
+  height: 9999px;
+}
+.img-wrap img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+  -ms-interpolation-mode: bicubic;
+}
+
+.btn-circle {
+  font-size: 26px;
+
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 45px;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+
+  color: white;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent;
+  &:focus,
+  &:hover {
+    color: white;
+    outline: none;
+    background: fade-out(white, .9);
+  }
+}
+
+.content-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+@media(min-width:992px) {
+  .content-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  #map {
+    height: 350px;
+  }
+}
+
+.btn {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+
+  border-radius: 0;
+}
+
+.btn-default {
+  color: $primary;
+  border: 1px solid $primary;
+  background-color: transparent;
+  &:focus,
+  &:hover {
+    color: black;
+    border: 1px solid $primary;
+    outline: none;
+    background-color: $primary;
+  }
+}
+
+ul.banner-social-buttons {
+  margin-top: 0;
+  @media(max-width: 1199px) {
+    margin-top: 15px;
+  }
+  @media(max-width:767px) {
+    li {
+      display: block;
+
+      margin-bottom: 20px;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 50px 0;
+  p {
+    font-size: 14px;
+
+    margin: 0;
+  }
+}
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+::selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+
+.marker{
+  background-color: blue;
+  color: greenyellow;
+}
+
+#about_me_holder {
+  //.container{
+  //  @include center_element;
+  //
+  //}
+  //background: transparent url("../assets/img/spelman_headhost_smile_bwc01.png") no-repeat center scroll;
+  //background: transparent url("../assets/img/needle01.png") no-repeat center scroll;
+
+
+  //LAST USED
+  //background: rgba(5, 14, 29, 0.65) url("../assets/img/mountain-filtered01.png") no-repeat center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-blend-mode: soft-light;
+
+}
+
+#about_me {
+  //background: #ff693d url("../assets/img/spelman_headhost_smile_bwc01.png") no-repeat center scroll;
+  //background: #ff693d url("../assets/img/needle01.png") no-repeat center scroll;
+  font-size: 1.4rem;
+  img{
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+  }
+  padding: 2rem;
+
+  //-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  //filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  ////background: linear-gradient(to bottom right, red, blue, black), url('../assets/img/emery_mask_black01.png')no-repeat bottom center scroll;
+
+}
+
+
+.projects-section {
+  color: white;
+
+  //background: url('../assets/img/downloads-bg.jpg') no-repeat center center scroll;
+  //background-color: black;
+  //background-blend-mode: screen;
+
+
+  //last used
+  //background: linear-gradient(to bottom right, rgba(68, 74, 168, 0.97), rgba(0, 0, 4, 0.5), rgb(68, 74, 168)), url('../assets/img/emery_mask_black01.png')no-repeat center scroll;
+  background-blend-mode: color-burn;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#projects{
+  margin-top:2rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  padding: 1rem;
+  border: 2px solid #42dca3;
+  color: #42dca3;
+  p{
+    color: white;
+  }
+  //min-width: 20rem;
+  //@include center_element;
+  //margin: 5rem;
+  a{
+    line-break: anywhere;
+  }
+  margin-bottom:2rem;
+
+  @media(min-width: 768px) {
+    padding-left: 5rem;
+  }
+
+  padding-left: 1rem;
+
+}
+//
+//
+//.wrapper {
+//  /* The height needs to be set to a fixed value for the effect to work.
+//   * 100vh is the full height of the viewport. */
+//  height: 100vh;
+//  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+//  overflow-x: hidden;
+//  /* Enable scrolling on the page. */
+//  overflow-y: auto;
+//  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+//  perspective: 2px;
+//
+//}
+//
+//
+//.section {
+//  /* you have to have this so that child elements are positioned absolutely relative to the parent*/
+//  position: center;
+//
+//  /*height of the container, must be set, but doesn't really matter what value it is*/
+//  height: 100vh;
+//
+//  /*text formatting*/
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  color: white;
+//  text-shadow: 0 0 5px #000;
+//}
+//
+//.parallax::after {
+//  /* Now display and position the pseudo element */
+//  content: " ";
+//  position: absolute;
+//  /*position: fixed;*/
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//
+//  /* Now move the pseudo element BACK and away,
+//  * then scaled back up to fill the viewport
+//  * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+//  transform: translateZ(-1px) scale(2);
+//
+//  /* Force background to fill the entire element */
+//  background-size: 100%;
+//
+//  /* need to keep the images from overlapping the sibling elements */
+//  z-index: -1;
+//}
+//
+//
+///*Now style the static div with something */
+//.static {
+//  background: #746aff;
+//}
+//
+///* now set the actual background images */
+//.bg1::after {
+//  background-image: url('https://placekitten.com/g/900/700');
+//}
+//
+//.bg2::after {
+//  background-image: url('https://placekitten.com/g/800/600');
+//}
+

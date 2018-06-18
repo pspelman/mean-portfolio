@@ -1,0 +1,400 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../assets/bootstrap/scss/bootstrap";
+@import "../../scss/_mixins.scss";
+
+//HEIGHT WIDTH
+$resume_height: 97rem;
+$resume_width: 65rem;;
+
+
+//COLORS
+$background__holder-color: rgba(108, 117, 125, 0.45);
+
+$headings__color__left-level-1: #93fff2;
+$headings__color__left-level-2: black;
+$headings__color__left-level-2: #fffffb;
+
+$headings__color__right-level-1: black;
+$headings__color__right-level-2: black;
+
+$headings__size__left-level-2: 1rem;
+$headings__fonts__size-level-1: 1.5rem;
+
+$panel__background-dark: #434342;
+
+$text__size__left-paragraph: white;
+
+$hr__color__left: #a9e3e3;
+$hr__color__right: #666666;
+
+// FONTS
+$headings__fonts__level-1: "Libre Baskerville";
+$headings__fonts__level-2: "Roboto Condensed";
+
+*{
+  font-family: $headings__fonts__level-1;
+}
+
+
+$inline_border: 2px solid red;
+$block_border: 2px solid purple;
+
+
+
+// COL WIDTHS
+
+
+//generate the col sizes (the col # corresponds to how many columns of space (out of 12) they take up)
+//$grid__bp--md: 768;
+//$grid__bp--lg: 1200;
+$grid__cols: 12;
+
+
+//BOOTSTRAP 4 breakpoints
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1200;
+$map-grid-props: (
+  '': 0,
+  '-sm': $grid__bp-sm,
+  '-md': $grid__bp-md,
+  '-lg': $grid__bp-lg,
+  '-xl': $grid__bp-xl
+);
+
+
+
+////mixin to create the media query that determines the min-width property based on screen size (breakpoint)
+//@mixin create-mediaQ($breakpoint) {
+//  @if($breakpoint == 0) {
+//    @content;
+//  }
+//  @else {
+//    @media screen and (min-width: $breakpoint * 1px) {
+//      @content;
+//    }
+//  }
+//}
+//
+////mixin for creating the classes based on different modifiers, number of cols, and the breakpoint for that size
+//@mixin create-col-classes($modifier, $grid__cols, $breakpoint){
+//
+//  // breakpoint refers to the midpoint where sm and md begin sizing differently
+//  @include create-mediaQ($breakpoint) {
+//    @for $i from 1 through $grid__cols {
+//      //the modifier refers to sm, md, lg, etc.
+//      &__col#{$modifier}-#{$i} {
+//        flex-basis: (100 / ($grid__cols / $i)) * 1%;
+//      }
+//
+//      //the offset elements for spacing (adding left margin)
+//      &__col#{$modifier}-offset-#{$i} {
+//        margin-left: (100 / ($grid__cols / $i) ) * 1%;
+//      }
+//    }
+//  }
+//}
+
+////Sass map for sizing breakpoints
+//$map-grid-props: ('-sm':0, '-md': $grid__bp-md, '-lg': $grid__bp-lg);
+//@each $modifier, $breakpoint in $map-grid-props {
+//  @include create-col-classes($modifier, $grid__cols, $breakpoint);
+//}
+
+.neutral {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  &-backdrop{
+    background-color: #080400;
+  }
+}
+.resume-holder {
+  max-width: $resume_width;
+  //width: 60rem;
+  height: fit-content;
+  overflow: auto;
+  padding-bottom: 1rem;
+  flex: 1;
+  //border: 4px solid greenyellow;
+  @include center_element;
+  background-color: $background__holder-color;
+}
+
+div{
+  //border: 2px solid red;
+  .innerDiv{
+    .contact-info{
+      margin-left: -15px;
+      border-top: 2px solid blue;
+    }
+    //border: 1px solid blue;
+    //background-color: #00e3e3;
+    //display: inline-flex;
+  }
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #a9e3e3;
+    //margin: 1em 0;
+    margin: 0 0;
+    padding: 0;
+  }
+
+  .hr-left {
+    border-top:2px solid #a9e3e3;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: static;
+    //margin-left: -15px;
+    //position: absolute;
+  }
+  .hr-right {
+    border-top: 3px solid #666666;
+    margin-top: 0.7rem;
+    margin-bottom: 5%;
+    margin-left: 32px;
+    //margin-left: 15px;
+    //position: absolute;
+  }
+}
+
+//@media screen and (max-width:499px){
+//  #left_column{
+//    height: 75rem;
+//  }
+//}
+//
+//@media (min-width:500px){
+//  #left_column{
+//    height: $resume_height;
+//  }
+//}
+//
+//@media screen and (min-device-width: 0px) {
+//  #left_column{
+//    height: 70rem;
+//  }
+//}
+//@media screen and (min-device-width: 379px) {
+//  #left_column{
+//    height: 90rem;
+//  }
+//}
+
+#left_column {
+  //resize: both;
+  background-color: $panel__background-dark;
+  padding-top: 3em;
+  min-height: ($resume_height);
+  //height: $resume_height;
+  //max-height: available;
+  //height: complex;
+  min-width: 12rem;
+  vertical-align: top;
+  text-align: right;
+  padding-right: 2rem;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  //border-bottom-left-radius: 2rem;
+  padding-bottom: 4rem;
+
+  a{
+    text-decoration-line: none;
+    color: #ffecd3;
+  }
+  p {
+    margin-bottom: 1.15rem;
+    font-size: 1rem;
+    line-height: 0.4rem;
+    color: $text__size__left-paragraph;
+  }
+
+  h1 {
+    color: $headings__color__left-level-1;
+    font-family: $headings__fonts__level-1;
+    font-size: $headings__fonts__size-level-1;
+    margin-bottom: 1.2rem;
+    &.toolbox-heading-h1{
+      color: $headings__color__left-level-1;
+      //color: rgb(146, 253, 255);
+      font-size: 2rem;
+      //text-decoration-color: rgba(194, 229, 255, 0.54);
+    }
+  }
+
+  h2 {
+    font-family: $headings__fonts__level-2;
+    font-size: $headings__size__left-level-2;
+    line-height: 1.1rem;
+  }
+  #tagline {
+    color: $headings__color__left-level-2;
+    margin-bottom: 2rem;
+  }
+  ul, li {
+    list-style-type: none;
+  }
+
+}
+
+#right_column {
+  background-color: rgb(255, 255, 251);
+  display: inline-block;
+  min-height: $resume_height;
+  resize: both;
+  vertical-align: top;
+  padding-top: 2.5em;
+  text-align: left;
+  color: black;
+  flex-direction: column;
+
+  h1{
+    color: $headings__color__right-level-1;
+    &.section-heading{
+      text-align: left;
+      font-family: $headings__fonts__level-1;
+      font-size: 2rem;
+      color: #6b6b6b;
+    }
+  }
+  h2 {
+    color: $headings__color__right-level-2;
+    font-family: $headings__fonts__level-2;
+  }
+
+  .section-top{
+    //padding-bottom:1rem;
+    border-bottom: 3px solid $hr__color__right;
+    //border-bottom: 3px solid $background__holder-color;
+    margin-right: -38px;
+    margin-bottom: 1rem;
+  }
+  .major-section {
+    //border: 1px solid rgba(106, 122, 128, 0.49);
+    border-radius: .5rem;
+    padding: .5rem;
+  }
+
+  .sub-section{
+    margin-bottom: 2rem;
+    line-height: 1.1rem;
+    &-heading{
+      text-transform: uppercase;
+      font-stretch: condensed;
+      font-size: 1.2rem;
+    }
+    &-project-heading{
+      font-stretch: condensed;
+      font-size: 1.1rem;
+      //text-decoration: underline;
+    }
+    &-other{
+      li{
+        line-height: 1rem;
+        font-weight: normal;
+        margin-left: -.9rem;
+        //white-space: nowrap;
+      }
+    }
+
+  }
+
+
+}
+
+.table_headings {
+  width:32.94%;
+  border:none;
+  border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .25pt;
+  padding: 0in 5.4pt 0in 5.4pt;
+}
+
+.name_title {
+  color: $headings__color__left-level-1;
+  font-family: $headings__fonts__level-1;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  overflow-wrap: break-spaces;
+  overflow: fragments;
+  margin-bottom: .5rem;
+  //resize: horizontal;
+  //box-sizing: border-box;
+}
+
+.education-item {
+  margin-bottom: 2rem;
+}
+
+
+.contact-info {
+  color: white;
+  font-size: 0.7rem;
+  overflow-wrap: break-word;
+  border-top: 2px solid $hr__color__left;
+  padding-top: 1rem;
+  margin-left: -15px;
+  margin-bottom: 1rem;
+
+
+}
+
+.toolbox {
+  padding-top:1rem;
+  border-top: 2px solid $hr__color__left;
+  margin-left: -15px;
+
+  ul, li  {
+    font-size: 0.8rem;
+  }
+  color: white;
+  &-div{
+    flex-wrap: wrap;
+    display: inline-block;
+    margin-left: 0rem;
+    vertical-align: top;
+    h4 {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+  &-heading {
+    //background-color: blue;
+    //transform: rotate(-12deg);
+    color: $headings__color__left-level-1;
+    font-size:2rem;
+  }
+  &-section{
+    & ul{
+      display: block;
+      flex-flow: wrap;
+    }
+    //@extend .col-sm-1;
+    @extend .offset-sm-2;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: top;
+    min-width:9rem;
+    font-size: .7rem;
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.project-description {
+  font-size: .9rem;
+  line-height: .2rem;
+}
+
+//.col-sm-12{
+//  &-hr-left{
+//    background-color: pink;
+//    border: 2px solid red;
+//    width: 108%;
+//    margin-left: -5%;
+//  }
+//}

@@ -296,8 +296,15 @@ div{
         line-height: 1rem;
         font-weight: normal;
         margin-left: -.9rem;
+        list-style-type: none;
         //white-space: nowrap;
       }
+    }
+    a {
+      color: dimgrey;
+    }
+    li {
+      list-style-type: symbols("*");
     }
 
   }

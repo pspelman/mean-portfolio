@@ -6868,7 +6868,12 @@ div .hr-right {
     #right_column .sub-section-other li {
       line-height: 1rem;
       font-weight: normal;
-      margin-left: -.9rem; }
+      margin-left: -.9rem;
+      list-style-type: none; }
+    #right_column .sub-section a {
+      color: dimgrey; }
+    #right_column .sub-section li {
+      list-style-type: symbols(""); }
 
 .table_headings {
   width: 32.94%;

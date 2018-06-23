@@ -4,7 +4,11 @@
 
 //HEIGHT WIDTH
 $resume_height: 97rem;
-$resume_width: 65rem;;
+$resume_width: 65rem;
+
+
+
+
 
 
 //COLORS
@@ -111,10 +115,15 @@ $map-grid-props: (
   }
 }
 .resume-holder {
+  //display: table;
+  display: flex;
+  @media screen and (max-width: 600px) {
+    display: table;
+  }
   max-width: $resume_width;
   //width: 60rem;
   height: fit-content;
-  overflow: auto;
+  //overflow: auto;
   padding-bottom: 1rem;
   flex: 1;
   //border: 4px solid greenyellow;
@@ -185,11 +194,14 @@ div{
 //}
 
 #left_column {
+
   //resize: both;
   background-color: $panel__background-dark;
   padding-top: 3em;
   min-height: ($resume_height);
-  //height: $resume_height;
+  //resize:both;
+  //max-height: ($resume_height);
+  //overflow:auto;
   //max-height: available;
   //height: complex;
   min-width: 12rem;
@@ -199,7 +211,10 @@ div{
   display: -webkit-inline-flex;
   flex-direction: column;
   //border-bottom-left-radius: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+
+
+
 
   a{
     text-decoration-line: none;
@@ -221,6 +236,8 @@ div{
       color: $headings__color__left-level-1;
       //color: rgb(146, 253, 255);
       font-size: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       //text-decoration-color: rgba(194, 229, 255, 0.54);
     }
   }
@@ -244,6 +261,13 @@ div{
   background-color: rgb(255, 255, 251);
   display: inline-block;
   min-height: $resume_height;
+
+  //@media(max-width: 700px) {
+  //  line-height: 1rem;
+  //  height: ($resume_height)*1.4;
+  //  //background-color: blue;
+  //}
+
   resize: both;
   vertical-align: top;
   padding-top: 2.5em;
@@ -397,11 +421,31 @@ div{
   line-height: .2rem;
 }
 
-//.col-sm-12{
-//  &-hr-left{
-//    background-color: pink;
-//    border: 2px solid red;
-//    width: 108%;
-//    margin-left: -5%;
-//  }
-//}
+.tool-blocks {
+  @extend .col-sm-12 ;
+  @extend .col-md-6;
+  @extend .col-lg-6;
+  display: inline-block;
+  //flex: border-box;
+  vertical-align: top;
+
+  li{
+    margin-left: -2rem;
+  }
+
+
+  @media(min-width: 900px) {
+    //letter-spacing: 1px;
+    line-height: 1rem;
+    padding-bottom: .5rem;
+    //background-color: red;
+    //padding-bottom:1rem;
+  }
+
+
+}
+
+#left_column, #right_column {
+  height: auto;
+  overflow: hidden;
+}

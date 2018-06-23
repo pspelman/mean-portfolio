@@ -9,6 +9,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {RouterModule} from "@angular/router";
+import {ScrollEventModule} from 'ngx-scroll-event';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {RouterModule} from "@angular/router";
     NgbModule.forRoot(),
     NgxPageScrollModule,
     NgbCollapseModule,
-    RouterModule
+    RouterModule,
+    ScrollEventModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import {NgbCollapseModule} from "@ng-bootstrap/ng-bootstrap";
 import {MainComponent} from "./main/main.component";
 import {Router} from "@angular/router";
 import {ActivatedRoute} from "@angular/router";
+import {ScrollEvent} from "ngx-scroll-event";
 
 
 @Component({
@@ -16,11 +17,11 @@ import {ActivatedRoute} from "@angular/router";
 export class AppComponent implements OnInit {
   title = 'app';
   // mapbox_token = "pk.eyJ1IjoicHNwZWxtYW4iLCJhIjoiY2poanJsNDBmMDRsYTMwcjA2aDFuODN4cSJ9.itOSiLnm059ORfgzcu8RXw";
-
   box = new MapboxStuff();
   siteLogic = new Portfolio();
-
   showResume = false;
+
+
 
   ngOnInit(): void {
 

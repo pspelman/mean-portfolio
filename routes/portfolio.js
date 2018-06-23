@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
 
 
 mongoose.Promise = global.Promise;
@@ -9,6 +9,20 @@ mongoose.Promise = global.Promise;
 //     console.log(`reached the quotes router`,);
 //     res.json({'message': 'You made it...congrats'});
 // });
+
+
+router.get("/research_task/", (req, res) => {
+    res.status(301).redirect("http://localhost:5000")
+});
+
+
+router.get('/research_task/:research_task_path_forward(*)', function(req, res, next) {
+    let research_task_path_forward = req.params.research_task_path_forward;
+    console.log(`forwarding to research path: `,research_task_path_forward);
+    // res.status(301).redirect("http://localhost:5000/");
+
+    res.status(301).redirect("http://localhost:5000/task/" + research_task_path_forward.toString())
+});
 
 
 router.all("*", (req,res,next) => {

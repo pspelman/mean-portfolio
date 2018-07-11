@@ -22,7 +22,7 @@ $headings__color__right-level-1: black;
 $headings__color__right-level-2: black;
 
 $headings__size__left-level-2: 1rem;
-$headings__fonts__size-level-1: 1.5rem;
+$headings__fonts__size-level-1: 1.4rem;
 
 $panel__background-dark: #434342;
 
@@ -44,6 +44,21 @@ $inline_border: 2px solid red;
 $block_border: 2px solid purple;
 
 
+@mixin left_content_h1 {
+  color: $headings__color__left-level-1;
+  //color: rgb(146, 253, 255);
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  //text-decoration-color: rgba(194, 229, 255, 0.54);
+}
+
+@mixin left_content_sub_h1 {
+  color: $headings__color__left-level-1;
+  font-family: $headings__fonts__level-1;
+  font-size: $headings__fonts__size-level-1;
+  margin-bottom: 1.2rem;
+}
 
 // COL WIDTHS
 
@@ -213,9 +228,6 @@ div{
   //border-bottom-left-radius: 2rem;
   padding-bottom: 2rem;
 
-
-
-
   a{
     text-decoration-line: none;
     color: #ffecd3;
@@ -228,17 +240,10 @@ div{
   }
 
   h1 {
-    color: $headings__color__left-level-1;
-    font-family: $headings__fonts__level-1;
-    font-size: $headings__fonts__size-level-1;
-    margin-bottom: 1.2rem;
-    &.toolbox-heading-h1{
-      color: $headings__color__left-level-1;
-      //color: rgb(146, 253, 255);
-      font-size: 2rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      //text-decoration-color: rgba(194, 229, 255, 0.54);
+    @include left_content_h1;
+    &.toolbox-heading-h1,
+    &.publications-heading-h1 {
+      @include left_content_sub_h1;
     }
   }
 
@@ -416,6 +421,28 @@ div{
   }
 }
 
+
+
+
+.publications {
+  padding-top:1rem;
+  border-top: 2px solid $hr__color__left;
+  margin-left: -15px;
+  color: white;
+  &-div {
+    flex-wrap: wrap;
+    display: inline-block;
+    margin-left: 0rem;
+    margin-bottom:2rem;
+    vertical-align: top;
+  }
+    @extend .offset-sm-2;
+    display: inline-flex;
+    flex-wrap: wrap;
+    min-width:9rem;
+    font-size: .65rem;
+}
+
 .project-description {
   font-size: .9rem;
   line-height: .2rem;
@@ -441,7 +468,29 @@ div{
     //background-color: red;
     //padding-bottom:1rem;
   }
+}
 
+.publications-block {
+  @extend .col-sm-12 ;
+  @extend .col-md-12;
+  @extend .col-lg-12;
+  display: inline-block;
+  //flex: border-box;
+  vertical-align: top;
+  margin-top: 0rem;
+  margin-bottom:1rem;
+
+  li {
+    margin-left: -2rem;
+  }
+
+  @media(min-width: 900px) {
+    //letter-spacing: 1px;
+    line-height: 1rem;
+    padding-bottom: .5rem;
+    //background-color: red;
+    //padding-bottom:1rem;
+  }
 
 }
 

@@ -7,10 +7,6 @@ $resume_height: 97rem;
 $resume_width: 65rem;
 
 
-
-
-
-
 //COLORS
 $background__holder-color: rgba(108, 117, 125, 0.45);
 
@@ -39,10 +35,8 @@ $headings__fonts__level-2: "Roboto Condensed";
   font-family: $headings__fonts__level-1;
 }
 
-
 $inline_border: 2px solid red;
 $block_border: 2px solid purple;
-
 
 @mixin left_content_h1 {
   color: $headings__color__left-level-1;
@@ -60,9 +54,8 @@ $block_border: 2px solid purple;
   margin-bottom: 1.2rem;
 }
 
+
 // COL WIDTHS
-
-
 //generate the col sizes (the col # corresponds to how many columns of space (out of 12) they take up)
 //$grid__bp--md: 768;
 //$grid__bp--lg: 1200;

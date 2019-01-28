@@ -256,6 +256,9 @@ div{
 }
 
 #right_column {
+  .highlight {
+    color: #5555aa
+  }
   background-color: rgb(255, 255, 251);
   display: inline-block;
   min-height: $resume_height;

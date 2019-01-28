@@ -6843,6 +6843,8 @@ div .hr-right {
   text-align: left;
   color: black;
   flex-direction: column; }
+  #right_column .highlight {
+    color: #5555aa; }
   #right_column h1 {
     color: black; }
     #right_column h1.section-heading {

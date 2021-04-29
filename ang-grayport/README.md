@@ -44,11 +44,23 @@ cd /var/www/mean-portfolio/
 sudo pm2 start app.js
 sudo pm2 stop 0
 sudo pm2 restart 0
+
+# RELOAD NGINX
+sudo /etc/init.d/nginx reload
+sudo /etc/init.d/nginx stop
+sudo /etc/init.d/nginx start
+
 sudo service nginx reload && sudo service nginx restart
 
 ```
 
-
+# Update NGINX server
+* connect to the server, then
+```shell
+cd /etc/nginx/sites-available/
+cd /etc/nginx/sites-enabled/
+```
+* 
 
 # Portfolio Site
 ```shell

@@ -28,7 +28,7 @@
     "ngx-page-scroll": "^5.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "ngx-scroll-event": "latest"
   },
   "devDependencies": {

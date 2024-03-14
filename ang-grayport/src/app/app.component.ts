@@ -1,11 +1,12 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 // import {MapboxStuff} from "./mapboxStuff";
-import {Portfolio} from "./portfolio";
-import {NgbCollapseModule} from "@ng-bootstrap/ng-bootstrap";
-import {MainComponent} from "./main/main.component";
-import {Router, Routes} from "@angular/router";
-import {ActivatedRoute} from "@angular/router";
+import {Portfolio} from './portfolio';
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
+import {MainComponent} from './main/main.component';
+import {Router, Routes} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
+
 // import {ScrollEvent} from "ngx-scroll-event";
 
 
@@ -22,7 +23,6 @@ export class AppComponent implements OnInit {
   showResume = false;
 
 
-
   ngOnInit(): void {
 
     // this.box.initMapboxMap();
@@ -30,10 +30,10 @@ export class AppComponent implements OnInit {
     // this.box.travelMapOne();
     // this.siteLogic.portfolioJS();
 
-    //put the following in ngOnInit(){}
+    // put the following in ngOnInit(){}
     $(function () {
       console.log(`inside of OnInit now!`,);
-    //     //END of 'ready' state function
+      //     //END of 'ready' state function
     });
 
   }
@@ -43,9 +43,6 @@ export class AppComponent implements OnInit {
 //   @HostBinding('class.hidden') @Input() hidden = false;
 //   @Input() caption: string;
 // }
-
-
-
 
 
 }

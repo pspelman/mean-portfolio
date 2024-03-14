@@ -1,10 +1,12 @@
 @import "../../scss/mixins";
-.navbar-collapse{
+
+.navbar-collapse {
   margin-right: auto;
   padding-left: 2rem;
   text-align: left;
   //background-color: red;
   text-justify: distribute;
+
   a:hover {
     @include link_hover_effect;
 

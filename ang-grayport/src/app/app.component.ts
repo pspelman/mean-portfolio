@@ -1,12 +1,12 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import * as $ from 'jquery';
-import {MapboxStuff} from "./mapboxStuff";
+// import {MapboxStuff} from "./mapboxStuff";
 import {Portfolio} from "./portfolio";
 import {NgbCollapseModule} from "@ng-bootstrap/ng-bootstrap";
 import {MainComponent} from "./main/main.component";
-import {Router} from "@angular/router";
+import {Router, Routes} from "@angular/router";
 import {ActivatedRoute} from "@angular/router";
-import {ScrollEvent} from "ngx-scroll-event";
+// import {ScrollEvent} from "ngx-scroll-event";
 
 
 @Component({
@@ -17,7 +17,7 @@ import {ScrollEvent} from "ngx-scroll-event";
 export class AppComponent implements OnInit {
   title = 'app';
   // mapbox_token = "pk.eyJ1IjoicHNwZWxtYW4iLCJhIjoiY2poanJsNDBmMDRsYTMwcjA2aDFuODN4cSJ9.itOSiLnm059ORfgzcu8RXw";
-  box = new MapboxStuff();
+  // box = new MapboxStuff();
   siteLogic = new Portfolio();
   showResume = false;
 
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
 
     // this.box.initMapboxMap();
 
-    this.box.travelMapOne();
+    // this.box.travelMapOne();
     // this.siteLogic.portfolioJS();
 
     //put the following in ngOnInit(){}

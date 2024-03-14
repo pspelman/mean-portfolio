@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables.scss';
 @import 'mixins.scss';
+
 body {
   font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
@@ -52,6 +53,7 @@ a {
   transition: all 0.2s ease-in-out;
 
   color: $primary;
+
   &:focus,
   &:hover {
     text-decoration: none;
@@ -68,6 +70,7 @@ a {
 
   border-bottom: 1px solid fade-out(white, .7);
   background-color: black;
+
   .navbar-toggler {
     font-size: 14px;
 
@@ -76,16 +79,17 @@ a {
     color: white;
     border: 1px solid white;
   }
+
   .navbar-brand {
     font-weight: 700;
   }
+
   a {
     color: white;
   }
 
 
-
-  @media(min-width:992px) {
+  @media(min-width: 992px) {
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -106,6 +110,7 @@ a {
     .nav-link.active {
       outline: none;
       background-color: rgba(white, .3);
+
       &:hover {
         color: white;
       }
@@ -126,6 +131,7 @@ a {
         color: lightseagreen;
         outline: none;
       }
+
       &:active,
       &:focus {
         outline: none;
@@ -184,20 +190,24 @@ $intro-text-size: 2.3rem;
     display: table-cell;
 
     vertical-align: middle;
+
     .brand-heading {
       font-size: 50px;
     }
+
     .intro-text {
       font-size: $intro-text-size;
     }
   }
-  @media(min-width:768px) {
+
+  @media(min-width: 768px) {
     height: 100%;
     padding: 0;
     .intro-body {
       .brand-heading {
         font-size: 4rem;
       }
+
       .intro-text {
         font-size: $intro-text-size;
       }
@@ -208,6 +218,7 @@ $intro-text-size: 2.3rem;
   //  background: url('../assets/img/elvis_piano_92.png') no-repeat bottom center scroll;
   //}
 }
+
 .masthead::after {
 
 
@@ -270,8 +281,6 @@ $intro-text-size: 2.3rem;
 }
 
 
-
-
 .item {
   margin: 0 auto;
   padding: 1em;
@@ -280,27 +289,30 @@ $intro-text-size: 2.3rem;
   height: 400px;
   overflow: hidden;
 }
+
 .item .img-wrap:before {
   content: '';
-  background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+  background-image: linear-gradient(to top, rgba(239, 239, 239, 255), rgba(239, 239, 239, 0));
   position: absolute;
   height: 100px;
   right: 0;
   bottom: 0;
   left: 0;
 }
+
 .item .img-wrap:after {
   content: '';
   display: block;
   height: 9999px;
 }
+
 .img-wrap img {
   width: auto;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
   border: 0;
-  box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
   -ms-interpolation-mode: bicubic;
 }
 
@@ -320,6 +332,7 @@ $intro-text-size: 2.3rem;
   border: 2px solid white;
   border-radius: 100% !important;
   background: transparent;
+
   &:focus,
   &:hover {
     color: white;
@@ -337,7 +350,8 @@ $intro-text-size: 2.3rem;
   width: 100%;
   height: 300px;
 }
-@media(min-width:992px) {
+
+@media(min-width: 992px) {
   .content-section {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -363,6 +377,7 @@ $intro-text-size: 2.3rem;
   color: $primary;
   border: 1px solid $primary;
   background-color: transparent;
+
   &:focus,
   &:hover {
     color: black;
@@ -377,12 +392,13 @@ ul.banner-social-buttons {
   @media(max-width: 1199px) {
     margin-top: 15px;
   }
-  @media(max-width:767px) {
+  @media(max-width: 767px) {
     li {
       display: block;
 
       margin-bottom: 20px;
       padding: 0;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -392,6 +408,7 @@ ul.banner-social-buttons {
 
 footer {
   padding: 50px 0;
+
   p {
     font-size: 14px;
 
@@ -420,7 +437,7 @@ img::-moz-selection {
 }
 
 
-.marker{
+.marker {
   background-color: blue;
   color: greenyellow;
 }
@@ -446,10 +463,12 @@ img::-moz-selection {
   //background: #ff693d url("../assets/img/spelman_headhost_smile_bwc01.png") no-repeat center scroll;
   //background: #ff693d url("../assets/img/needle01.png") no-repeat center scroll;
   font-size: 1.4rem;
-  img{
+
+  img {
     -webkit-filter: sepia(100%);
     filter: sepia(100%);
   }
+
   padding: 2rem;
 
   //-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
@@ -476,8 +495,8 @@ img::-moz-selection {
   background-size: cover;
 }
 
-#projects{
-  margin-top:2rem;
+#projects {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -485,16 +504,19 @@ img::-moz-selection {
   padding: 1rem;
   border: 2px solid #42dca3;
   color: #42dca3;
-  p{
+
+  p {
     color: white;
   }
+
   //min-width: 20rem;
   //@include center_element;
   //margin: 5rem;
-  a{
+  a {
     line-break: anywhere;
   }
-  margin-bottom:2rem;
+
+  margin-bottom: 2rem;
 
   @media(min-width: 768px) {
     padding-left: 5rem;
@@ -503,6 +525,7 @@ img::-moz-selection {
   padding-left: 1rem;
 
 }
+
 //
 //
 //.wrapper {

@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {ScrollEvent} from "ngx-scroll-event";
+import {Component, OnInit} from '@angular/core';
+// import {ScrollEvent} from 'ngx-scroll-event';
+
+// @ts-ignore
+import {ScrollEvent} from 'ngx-scroll-event';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +11,9 @@ import {ScrollEvent} from "ngx-scroll-event";
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
   showResume = false;
 
   toggleNavbar = false;

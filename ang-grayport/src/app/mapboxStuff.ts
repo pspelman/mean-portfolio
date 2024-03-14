@@ -50,7 +50,6 @@ export class MapboxStuff {
       });
 
 
-
       map.addLayer({
         "id": "route",
         "type": "line",
@@ -106,10 +105,6 @@ export class MapboxStuff {
       });
 
     });
-
-
-
-
 
 
     map.on('load', function () {
@@ -480,7 +475,7 @@ export class MapboxStuff {
           "text-anchor": "top"
         },
         "paint": {
-          "text-color":"#ffe9c5"
+          "text-color": "#ffe9c5"
         }
 
       });
@@ -528,7 +523,6 @@ export class MapboxStuff {
                 "icon": "marker"
               }
             },
-
 
 
             {
@@ -587,16 +581,16 @@ export class MapboxStuff {
     //
     //
 
-    $("#fly").click(function(){
+    $("#fly").click(function () {
       console.log(`stuff fly`,);
       $("#woolwich").show();
     });
 
-    $("#hide").click(function(){
+    $("#hide").click(function () {
       $("#woolwich").hide();
     });
 
-    };
+  };
 
 
 }

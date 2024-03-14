@@ -24,6 +24,10 @@ router.get('/research_task/:research_task_path_forward(*)', function(req, res, n
     res.status(301).redirect("http://localhost:5000/task/" + research_task_path_forward.toString())
 });
 
+// router.get('/resume', function(req, res, next) {
+//     console.log(`RESUME SHIT`);
+//     res.status(200).render("GOING TO RESUME")
+// });
 
 router.all("*", (req,res,next) => {
     console.log(`reached wildcard route...need to redirect to Angular templates`,);

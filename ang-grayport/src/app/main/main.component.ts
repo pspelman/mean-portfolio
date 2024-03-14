@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ResumeComponent} from "../resume/resume.component";
+import {Component, OnInit} from '@angular/core';
+import {ResumeComponent} from "../resume/resume.component";
 
 @Component({
   selector: 'app-main',
@@ -8,7 +8,8 @@ import { ResumeComponent} from "../resume/resume.component";
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
 
   pageTopNav = "#page-top";
@@ -20,7 +21,7 @@ export class MainComponent implements OnInit {
 
   showResume = false;
 
-  toggleResume(){
+  toggleResume() {
     if (this.showResume) {
       this.showResume = false;
     } else {

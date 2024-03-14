@@ -1,0 +1,29 @@
+docker run -p 8080:3000 -d mywebapp:latest# Node modules
+node_modules
+
+# Logs
+logs
+*.log
+
+# Ignore IDE specific files
+.idea
+*.swp
+*.swo
+*.swm
+.tsbuildinfo
+.vscode/
+
+# Ignore local configuration files that may contain sensitive information
+.env
+.env.local
+
+# Ignore operating system generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Angular build directory
+dist/
+
+# Ignore Angular test and e2e
+e2e/
+coverage/

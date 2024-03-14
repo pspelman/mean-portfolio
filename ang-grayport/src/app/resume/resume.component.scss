@@ -31,7 +31,7 @@ $hr__color__right: #666666;
 $headings__fonts__level-1: "Libre Baskerville";
 $headings__fonts__level-2: "Roboto Condensed";
 
-*{
+* {
   font-family: $headings__fonts__level-1;
 }
 
@@ -76,7 +76,6 @@ $map-grid-props: (
 );
 
 
-
 ////mixin to create the media query that determines the min-width property based on screen size (breakpoint)
 //@mixin create-mediaQ($breakpoint) {
 //  @if($breakpoint == 0) {
@@ -118,10 +117,12 @@ $map-grid-props: (
   background-color: black;
   width: 100vw;
   height: 100vh;
-  &-backdrop{
+
+  &-backdrop {
     background-color: #080400;
   }
 }
+
 .resume-holder {
   //display: table;
   display: flex;
@@ -139,17 +140,19 @@ $map-grid-props: (
   background-color: $background__holder-color;
 }
 
-div{
+div {
   //border: 2px solid red;
-  .innerDiv{
-    .contact-info{
+  .innerDiv {
+    .contact-info {
       margin-left: -15px;
       border-top: 2px solid blue;
     }
+
     //border: 1px solid blue;
     //background-color: #00e3e3;
     //display: inline-flex;
   }
+
   hr {
     display: block;
     height: 1px;
@@ -161,13 +164,14 @@ div{
   }
 
   .hr-left {
-    border-top:2px solid #a9e3e3;
+    border-top: 2px solid #a9e3e3;
     margin-top: 5%;
     margin-bottom: 5%;
     position: static;
     //margin-left: -15px;
     //position: absolute;
   }
+
   .hr-right {
     border-top: 3px solid #666666;
     margin-top: 0.7rem;
@@ -221,10 +225,11 @@ div{
   //border-bottom-left-radius: 2rem;
   padding-bottom: 2rem;
 
-  a{
+  a {
     text-decoration-line: none;
     color: #ffecd3;
   }
+
   p {
     margin-bottom: 1.15rem;
     font-size: 1rem;
@@ -234,6 +239,7 @@ div{
 
   h1 {
     @include left_content_h1;
+
     &.toolbox-heading-h1,
     &.publications-heading-h1 {
       @include left_content_sub_h1;
@@ -245,10 +251,12 @@ div{
     font-size: $headings__size__left-level-2;
     line-height: 1.1rem;
   }
+
   #tagline {
     color: $headings__color__left-level-2;
     margin-bottom: 2rem;
   }
+
   ul, li {
     list-style-type: none;
   }
@@ -259,6 +267,7 @@ div{
   .highlight {
     color: #5555aa
   }
+
   background-color: rgb(255, 255, 251);
   display: inline-block;
   min-height: $resume_height;
@@ -276,48 +285,54 @@ div{
   color: black;
   flex-direction: column;
 
-  h1{
+  h1 {
     color: $headings__color__right-level-1;
-    &.section-heading{
+
+    &.section-heading {
       text-align: left;
       font-family: $headings__fonts__level-1;
       font-size: 2rem;
       color: #6b6b6b;
     }
   }
+
   h2 {
     color: $headings__color__right-level-2;
     font-family: $headings__fonts__level-2;
   }
 
-  .section-top{
+  .section-top {
     //padding-bottom:1rem;
     border-bottom: 3px solid $hr__color__right;
     //border-bottom: 3px solid $background__holder-color;
     margin-right: -38px;
     margin-bottom: 1rem;
   }
+
   .major-section {
     //border: 1px solid rgba(106, 122, 128, 0.49);
     border-radius: .5rem;
     padding: .5rem;
   }
 
-  .sub-section{
+  .sub-section {
     margin-bottom: 2rem;
     line-height: 1.1rem;
-    &-heading{
+
+    &-heading {
       text-transform: uppercase;
       font-stretch: condensed;
       font-size: 1.2rem;
     }
-    &-project-heading{
+
+    &-project-heading {
       font-stretch: condensed;
       font-size: 1.1rem;
       //text-decoration: underline;
     }
-    &-other{
-      li{
+
+    &-other {
+      li {
         line-height: 1rem;
         font-weight: normal;
         margin-left: -.9rem;
@@ -325,9 +340,11 @@ div{
         //white-space: nowrap;
       }
     }
+
     a {
       color: #343434;
     }
+
     li {
       list-style-type: symbols("*");
     }
@@ -338,10 +355,10 @@ div{
 }
 
 .table_headings {
-  width:32.94%;
-  border:none;
-  border-bottom:solid windowtext 1.0pt;
-  mso-border-bottom-alt:solid windowtext .25pt;
+  width: 32.94%;
+  border: none;
+  border-bottom: solid windowtext 1.0pt;
+  mso-border-bottom-alt: solid windowtext .25pt;
   padding: 0in 5.4pt 0in 5.4pt;
 }
 
@@ -375,42 +392,49 @@ div{
 }
 
 .toolbox {
-  padding-top:1rem;
+  padding-top: 1rem;
   border-top: 2px solid $hr__color__left;
   margin-left: -15px;
 
-  ul, li  {
+  ul, li {
     font-size: 0.8rem;
   }
+
   color: white;
-  &-div{
+
+  &-div {
     flex-wrap: wrap;
     display: inline-block;
     margin-left: 0rem;
     vertical-align: top;
+
     h4 {
       margin-right: 1rem;
       font-size: 1.4rem;
     }
   }
+
   &-heading {
     //background-color: blue;
     //transform: rotate(-12deg);
     color: $headings__color__left-level-1;
-    font-size:2rem;
+    font-size: 2rem;
   }
-  &-section{
-    & ul{
+
+  &-section {
+    & ul {
       display: block;
       flex-flow: wrap;
     }
+
     //@extend .col-sm-1;
     @extend .offset-sm-2;
     display: inline-flex;
     flex-wrap: wrap;
     vertical-align: top;
-    min-width:9rem;
+    min-width: 9rem;
     font-size: .7rem;
+
     h4 {
       font-size: 1rem;
     }
@@ -418,25 +442,25 @@ div{
 }
 
 
-
-
 .publications {
-  padding-top:1rem;
+  padding-top: 1rem;
   border-top: 2px solid $hr__color__left;
   margin-left: -15px;
   color: white;
+
   &-div {
     flex-wrap: wrap;
     display: inline-block;
     margin-left: 0rem;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
     vertical-align: top;
   }
-    @extend .offset-sm-2;
-    display: inline-flex;
-    flex-wrap: wrap;
-    min-width:9rem;
-    font-size: .65rem;
+
+  @extend .offset-sm-2;
+  display: inline-flex;
+  flex-wrap: wrap;
+  min-width: 9rem;
+  font-size: .65rem;
 }
 
 .project-description {
@@ -452,7 +476,7 @@ div{
   //flex: border-box;
   vertical-align: top;
 
-  li{
+  li {
     margin-left: -2rem;
   }
 
@@ -474,7 +498,7 @@ div{
   //flex: border-box;
   vertical-align: top;
   margin-top: 0rem;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 
   li {
     margin-left: -2rem;

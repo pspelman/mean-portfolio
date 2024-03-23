@@ -1,0 +1,369 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Philip Spelman
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\begin{flushleft}
+    \textbf{\large Philip Spelman} \\
+    \textit{United States} $|$
+    \textit{206-920-3951} $|$
+    \href{http://www.philspelman.com}{{\textit{@website}}} $|$
+    \href{mailto:phil.spelman@gmail.com}{{\textit{@mail}}} $|$
+    \href{https://www.linkedin.com/in/philspelman/}{{\textit{@linkedin}}} $|$
+    \href{https://github.com/pspelman}{{\textit{@github}}}
+    \vspace{-8pt}
+\end{flushleft}
+
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+\section{Professional Summary}
+\vspace{-3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     {Versatile developer with more than five years of professional experience across all parts of the tech stack. “Unicorn” accurately captures the unique set of skills from training as a cinical psychologist, academic researcher, data scientist, and software engineer. Deriving purpose from engaging innovative projects creating tech-based solutions across many domains. Passionate about harnessing technology to solve complex challenges and enhance user experience, I am eager to collaborate on impactful projects.} \\
+    }}
+ \end{itemize}
+ \sectionspace
+
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\section{Awards and Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\titleItem{Star Award} \emph{ $|$ Company 1}}{September 2018}
+      \resumeProjectHeading
+          {\titleItem{Kudos Award} \emph{ $|$ Company 2}}{May 2017}
+      \resumeProjectHeading
+          {\titleItem{IBM Full Stack Software Developer} \emph{$|$ IBM}}{November 2023}
+          \resumeProjectHeading
+          {\titleItem{CompTia Sec+} \emph{$|$ CompTia}}{December 2023}
+    \resumeSubHeadingListEnd
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+
+\section{Technical Skills}
+\subheadingtitlevspace
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \titleItem{Languages}{: C\#, Python, C/C++, SQL (Postgres, MS-SQL, MySQL), JavaScript, TypeScript, HTML, XML, JSON, CSS, Sass} \\
+     \titleItem{Frameworks}{: ASP.NET (.NET Core, MVC, VB.NET), jQuery, React Native, Blazor, Node.js, Flask, Django, ExpressJS, Bootstrap} \\
+     \titleItem{DevOps and API Tools}{: IIS, Git, Docker, OpenShift, Kubernetes, Azure DevOps, TFS, Octopus Deploy, Swagger, Postman} \\
+     \titleItem{Cloud and Security Tools}{: IBM Cloud, AWS, Azure Cloud, SQL Server, SSIS, SSRS, Linux (Configuring and Managing)} \\
+     \titleItem{Others}{: Data Modeling, Agile (Scrum/Kanban), SOLID, Design Patterns,  Debugging, Root Cause Analysis}
+    }}
+ \end{itemize}
+\sectionspace
+
+
+
+
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeProjectHeading
+           {\titleItem{{Lead Software Engineer, Co-Founder \& CTO}} $|$ \emph{AutoAPIs}}{July 2023 -- Present}
+            \begin{itemize}[leftmargin=0.15in, label={}]
+                {\item{
+                 {As a co-founder and CTO of AutoAPIs, a consulting firm specializing in the automotive industry, I've played a pivotal role in shaping the company's direction and success. My expertise in leading our team to develop scalable, custom API solutions has directly contributed to enhancing our clients' software development and business strategies. I've been instrumental in advising and collaborating on both technical and business fronts, ensuring our solutions not only meet but exceed industry standards.} \\
+                }}
+             \end{itemize}
+      \resumeItemListStart
+        \resumeItem {Custom API development for automotive industry clients, including data integration, API design, and implementation.}
+      \resumeItemListEnd
+
+
+    \resumeProjectHeading
+           {\titleItem{{Software Engineer}} $|$ \emph{AutoFi}}{June 2021 -- July 2023}
+            \begin{itemize}[leftmargin=0.15in, label={}]
+                {\item{
+                 {Full-stack engineer. Worked with the team building products for Santander USA (SCUSA). Backend and frontend work with Node and React using Next.js, testing with Jest and Mocha, MySQL, MongoDB, GraphQL. Database creation, analysis and optimization. DevOps work with Docker, API design and implementation.} \\
+                }}
+             \end{itemize}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented user management including a custom 2-factor authentication solution leveraging Amazon SES and the Twilio API for Santander Drive Marketplace customers}
+        \resumeItem{Designed and implemented customer relationship management (CRM) integration compliant with the Auto-lead Data Format (ADF) spec to accurately push new opportunities to dealer users of the Santander Dealer Portal}
+        \resumeItem{Point person collaborating with multiple Santander engineering teams to deliver a proxy-based Single sign-on (SSO) solution for the Santander Dealer Portal leveraging Santander's enterprise SSO}
+        \resumeItem{Ownership of onboarding new engineers. I streamlined the onboarding process by updating outdated docs, creating checklists with required and optional tools and steps, and creating bash scripts to speed up executing common terminal-based tasks. The result was a reduction in time to first commit from ~2 weeks to 1 day}
+        \resumeItem{Improved CI/CD, consistency across environments, and scalability by implementing containerization with Docker for the Santander Dealer Portal and Drive Marketplace products}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+           {\titleItem{{Software Engineer}} $|$ \emph{Vaporstream}}{November 2020 -- August 2021}
+            \begin{itemize}[leftmargin=0.15in, label={}]
+                {\item{
+                 {Full-stack engineer. Projects included backend work in Python and Node, DevOps work with Docker and Kubernetes, API design and documentation, and frontend work with React, Angular, and desktop app creation with Electron.} \\
+                }}
+             \end{itemize}
+
+      \resumeItemListStart
+        \resumeItem{Developed desktop chat app with Electron + React, adapted to use the Vaporstream backend via websockets}
+        \resumeItem{Designed / documented API for 3rd parties to manage emergency response contacts}
+        \resumeItem{Created Docker setup to facilitate rapid establishment of local development environment for future developers}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+           {\titleItem{{Lead Software Engineer}} $|$ \emph{Hibersense}}{August 2018 -- June 2023}
+            \begin{itemize}[leftmargin=0.15in, label={}]
+                {\item{
+                 {Lead fullstack dev at a fast-paced, Pittsburgh-based start-up. Responsible for designing, implementing, testing, and deploying code to control HVAC systems for customer comfort. Building tech support tools and using data science to analyze system performance. Developing algorithms to intelligently manage system state using scheduling, occupancy, and other user preferences.} \\
+                }}
+             \end{itemize}
+      \resumeItemListStart
+        \resumeItem{Wrote algorithms for hub control logic (control of HVAC state, vent position, scheduling, cue-contingent scene activation, etc.)}
+        \resumeItem{Wrote API logic for hub integrations with 3rd-party software}
+        \resumeItem{Wrote algorithms for dynamic device assignment / pairing in multi-device systems}
+        \resumeItem{Created system health monitor and alerts utilities}
+        \resumeItem{Developed tools for developers to perform real-time debugging and troubleshooting}
+        \resumeItem{Contributed to Hibersense app codebase in react native}
+        \resumeItem{Wrote utilities for QA processes, including automated device testing}
+        \resumeItem{Wrote utilities to streamline new hardware provisioning}
+        \resumeItem{Built second layer communication system to control devices via MQTT as a fallback for remote system control}
+        \resumeItem{Developed hub extender solution with Raspberry Pi Zero}
+        \resumeItemListEnd
+
+
+
+  \resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Utah}{Salt Lake City, UT}
+%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023}
+%     \resumeSubheading
+%       {SRM University}{Chennai, TN, India}
+%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
+%   \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Utah}{GPA : 3.86}
+      {MS in Computer Science}{January 2021 -- December 2023}
+    \resumeSubheading
+      {University of Utah}{GPA : 3.75}
+      {BS in Computer Science and Engineering}{August 2012 -- May 2016}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}
+     \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\titleItem{Project 1} $|$ \emph{Django, IBM Cloud, SQLite, Function-as-a-Service, Kubernetes, OpenShift}}{Nov 2023}
+            \resumeItemListStart
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+            \resumeItem{Ut consequat semper viverra nam libero justo laoreet sit amet. Feugiat nisl pretium fusce id velit ut tortor pretium.}
+           \resumeItemListEnd
+       \resumeProjectHeading
+           {\titleItem{Project 2} $|$ \emph{Python, numpy. D3.js}}{Spring 2022}
+            \resumeItemListStart
+            \resumeItem{Ut consequat semper viverra nam libero justo laoreet sit amet. Feugiat nisl pretium fusce id velit ut tortor pretium.}
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+           \resumeItemListEnd
+       \resumeProjectHeading
+           {\titleItem{Project 3} $|$ \emph{\LaTeX}}{November 2021}
+            \resumeItemListStart
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+           \resumeItemListEnd
+     \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
+
+About
+
+    About us
+    Our values
+    Careers
+    Press & awards
+    Blog
+
+Learn
